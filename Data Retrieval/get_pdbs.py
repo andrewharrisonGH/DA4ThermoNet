@@ -26,7 +26,7 @@ def main():
         return
     
     # Extract unique PDB IDs
-    unique_pdb_ids = df['pdb_id'].dropna().unique().upper()
+    unique_pdb_ids = df['pdb_id'].dropna().unique()
     
     # Create output directory
     csv_dir = os.path.dirname(os.path.abspath(args.csv_file))
@@ -35,7 +35,7 @@ def main():
     
     # Download each unique PDB file
     for pdb_id in unique_pdb_ids:
-        download_pdb_file(pdb_id, pdb_dir)
+        download_pdb_file(pdb_id.upper(), pdb_dir)
     
     print('Download process completed.')
 
