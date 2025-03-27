@@ -35,7 +35,7 @@ def main():
     
     # Download each unique PDB file
     for pdb_id in unique_pdb_ids:
-        download_pdb_file(pdb_id.upper(), pdb_dir)
+        download_pdb_file(pdb_id.upper()[:-1], pdb_dir)
     
     print('Download process completed.')
 
