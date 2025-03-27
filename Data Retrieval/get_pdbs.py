@@ -15,7 +15,7 @@ def download_pdb_file(pdb_id, output_dir):
 
 def main():
     parser = argparse.ArgumentParser(description='Download PDB files for unique pdb_ids in a CSV file.')
-    parser.add_argument('--csv_file', dest="csv_file" type=str, help='Path to the CSV file')
+    parser.add_argument('--csv_file', dest="csv_file", type=str, help='Path to the CSV file')
     args = parser.parse_args()
     
     # Load the CSV file into a Pandas DataFrame
