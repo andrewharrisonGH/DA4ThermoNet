@@ -26,7 +26,7 @@ def main():
         return
     
     # Extract unique PDB IDs
-    unique_pdb_ids = df['pdb_id'].dropna().unique()
+    unique_pdb_ids = df['pdb_id'].dropna().unique().upper()
     
     # Create output directory
     csv_dir = os.path.dirname(os.path.abspath(args.csv_file))
