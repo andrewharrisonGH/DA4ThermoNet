@@ -42,10 +42,40 @@ def rotate_model(model, rotation):
     return model
 
 
+def compute_rmsd(model1, model2, pdb_id, x_rot, y_rot, z_rot, chain, res_num, logfile='rmsd_log.csv'):
+    parser = PDBParser(QUIET=True)
+
+    chain1 = next(model1.get_chains())
+    chain2 = next(model2.get_chains())
+
+    atoms1 = [atom for atom in chain1.get_atoms() if atom.get_id() == 'CA']
+    atoms2 = [atom for atom in chain2.get_atoms() if atom.get_id() == 'CA']
+
+    if len(atoms1) != len(atoms2):
+        print(f"Warning: Number of CA atoms mismatch ({len(atoms1)} vs {len(atoms2)})")
+        return None
+
+    # Extract coordinates
+    coords1 = np.array([atom.get_coord() for atom in atoms1])
+    coords2 = np.array([atom.get_coord() for atom in atoms2])
+
+    # Compute RMSD without superimposing
+    diff = coords1 - coords2
+    rmsd = np.sqrt(np.mean(np.sum(diff ** 2, axis=1)))
+
+    # Log the result
+    with open(logfile, 'a') as log:
+        log.write(f"{pdb_id},{chain},{res_num},{x_rot},{y_rot},{z_rot},{rmsd:.4f}\n")
+
+    #print(f"RMSD: {rmsd:.4f} Å (logged to {logfile})")
+    return rmsd
+
+
 def main():
     parser = argparse.ArgumentParser(description="centre and randomly orient a pdb file n times")
     # parser.add_argument("--n", dest="n", type=int, required=True, help="number of random rotations per input PDB file")
-    parser.add_argument("--pdb_in", dest="pdb_in", type=str, required=True, help="path to input PDB file")
+    parser.add_argument("--pdb_in", dest="pdb_in", type=str, required=True, help="path to input PDB folder")
+    parser.add_argument("--pdb_id", dest="pdb_id", type=str, required=True, help="PDB ID and Chain e.g. 1A0FA for protein 1A0F specifying chain A")
     parser.add_argument("--pdb_out", dest="pdb_out", type=str, required=True, help="path to output PDB folder location")
     parser.add_argument("--xrot_clock", dest="xrot_clock", type=float, required=True, help="clockwise rotation angle about the x-axis - 0 to 360 degrees")
     parser.add_argument("--yrot_clock", dest="yrot_clock", type=float, required=True, help="clockwise rotation angle about the y-axis - 0 to 360 degrees")
@@ -54,11 +84,12 @@ def main():
     args = parser.parse_args()
     
     pdb_in = args.pdb_in
-    pdb_id = pdb_in.split('/')[1]
-    pdb_id = pdb_id.split('.')[0]
+    pdb_id = args.pdb_id
+    chain = pdb_id[-1]
+    pdb_id = pdb_id[:-1]
     pdb_out = args.pdb_out
     res_num = args.res_num
-    structure = get_pdb_structure(pdb_id, pdb_in)
+    structure = get_pdb_structure(pdb_id, pdb_in + '\\' + pdb_id + '.pdb')
     model = list(structure.get_models())[0]
     
     residue = list(model.get_residues())[res_num-1]
@@ -82,15 +113,19 @@ def main():
 
     rotated_model = rotate_model(deepcopy(model), rotation)  # specify rotation
     
-    new_structure = Structure.Structure("test_dir")
-    new_structure.add(rotated_model)
+    compute_rmsd(model, rotated_model, pdb_id, args.xrot_clock, args.yrot_clock, args.zrot_clock, chain, res_num)
 
-    io = PDBIO()
-    io.set_structure(new_structure)
+    # Save rotated Structure ------------------------------------------------|
+    # new_structure = Structure.Structure("test_dir")
+    # new_structure.add(rotated_model)
 
-    output_path_new = os.path.join(output_path, pdb_id + "_dir_" + str(int(args.xrot_clock)) + "_" + str(int(args.yrot_clock)) + "_" + str(int(args.zrot_clock)) + ".pdb")
+    # io = PDBIO()
+    # io.set_structure(new_structure)
 
-    io.save(output_path_new)
+    # output_path_new = os.path.join(output_path, pdb_id + "_dir_" + str(int(args.xrot_clock)) + "_" + str(int(args.yrot_clock)) + "_" + str(int(args.zrot_clock)) + ".pdb")
+
+    # io.save(output_path_new)
+    # -----------------------------------------------------------------------|
 
     # temp for centered model
     # new_structure = Structure.Structure("centered")
