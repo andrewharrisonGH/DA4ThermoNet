@@ -1,4 +1,4 @@
-pdb_id,position,wild_type,mutant,ddg
+pdb_id,pos,wild_type,mutant,ddg
 1otrB,34,E,A,-0.07
 1rtbA,4,A,S,0.47
 1thqA,157,M,A,0.77
