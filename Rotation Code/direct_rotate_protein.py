@@ -122,7 +122,7 @@ def main():
     # io = PDBIO()
     # io.set_structure(new_structure)
 
-    # output_path_new = os.path.join(output_path, pdb_id + "_dir_" + str(int(args.xrot_clock)) + "_" + str(int(args.yrot_clock)) + "_" + str(int(args.zrot_clock)) + ".pdb")
+    # output_path_new = os.path.join(output_path, pdb_id + '_' + chain + str(res_num) + "_dir_" + str(int(args.xrot_clock)) + "_" + str(int(args.yrot_clock)) + "_" + str(int(args.zrot_clock)) + ".pdb")
 
     # io.save(output_path_new)
     # -----------------------------------------------------------------------|
