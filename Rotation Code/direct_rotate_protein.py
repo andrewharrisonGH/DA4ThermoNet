@@ -72,7 +72,7 @@ def compute_rmsd(model1, model2, pdb_id, x_rot, y_rot, z_rot, chain, res_num, lo
 
 
 def main():
-    parser = argparse.ArgumentParser(description="centre and randomly orient a pdb file n times")
+    parser = argparse.ArgumentParser(description="centre and directly orient a pdb file by specified rotations")
     # parser.add_argument("--n", dest="n", type=int, required=True, help="number of random rotations per input PDB file")
     parser.add_argument("--pdb_in", dest="pdb_in", type=str, required=True, help="path to input PDB folder")
     parser.add_argument("--pdb_id", dest="pdb_id", type=str, required=True, help="PDB ID and Chain e.g. 1A0FA for protein 1A0F specifying chain A")
