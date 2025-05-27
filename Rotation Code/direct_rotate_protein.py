@@ -113,18 +113,18 @@ def main():
 
     rotated_model = rotate_model(deepcopy(model), rotation)  # specify rotation
     
-    compute_rmsd(model, rotated_model, pdb_id, args.xrot_clock, args.yrot_clock, args.zrot_clock, chain, res_num)
+    # compute_rmsd(model, rotated_model, pdb_id, args.xrot_clock, args.yrot_clock, args.zrot_clock, chain, res_num)
 
     # Save rotated Structure ------------------------------------------------|
-    # new_structure = Structure.Structure("test_dir")
-    # new_structure.add(rotated_model)
+    new_structure = Structure.Structure("test_dir")
+    new_structure.add(rotated_model)
 
-    # io = PDBIO()
-    # io.set_structure(new_structure)
+    io = PDBIO()
+    io.set_structure(new_structure)
 
-    # output_path_new = os.path.join(output_path, pdb_id + '_' + chain + str(res_num) + "_dir_" + str(int(args.xrot_clock)) + "_" + str(int(args.yrot_clock)) + "_" + str(int(args.zrot_clock)) + ".pdb")
+    output_path_new = os.path.join(output_path, pdb_id + '_' + chain + str(res_num) + '_' + str(int(args.xrot_clock)) + "_" + str(int(args.yrot_clock)) + "_" + str(int(args.zrot_clock)) + ".pdb")
 
-    # io.save(output_path_new)
+    io.save(output_path_new)
     # -----------------------------------------------------------------------|
 
     # temp for centered model
