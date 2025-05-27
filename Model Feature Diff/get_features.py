@@ -8,7 +8,7 @@ import numpy as np
 
 
 def compute_voxel_features(mutation_site, pdb_file, verbose=False, 
-        boxsize=16, voxelsize=1, rotations=None):
+        boxsize=16, voxelsize=1):
     """Compute voxel features around the mutation site.
 
     Parameters
@@ -34,20 +34,14 @@ def compute_voxel_features(mutation_site, pdb_file, verbose=False,
     if center.size == 0:
         center = mol.get('coords', 'resid ' + str(mutation_site) + ' and name CA')
     #
-    if rotations is None:
-        features, _, _ = getVoxelDescriptors(prot, center=center.flatten(), 
-                boxsize=[boxsize, boxsize, boxsize], voxelsize=voxelsize, validitychecks=False)
-    else:
-        voxel_centers = getCenters(prot, boxsize=[boxsize, boxsize, boxsize], 
-                center=center.flatten(), voxelsize=voxelsize)
-        rotated_voxel_centers = rotateCoordinates(voxel_centers[0], rotations, center.flatten())
-        features, _ = getVoxelDescriptors(prot, usercenters=rotated_voxel_centers, validitychecks=False)
-    # return features
-    nchannels = features.shape[1]
-    n_voxels = int(boxsize / voxelsize)
-    features = features.transpose().reshape((nchannels, n_voxels, n_voxels, n_voxels))
-
-    return features
+    
+    features, centers, _ = getVoxelDescriptors(prot, center=center.flatten(), 
+        boxsize=[boxsize, boxsize, boxsize], voxelsize=voxelsize, validitychecks=False)
+    
+    # Reshape features to N_voxels × N_channels (flattened voxel grid)
+    features = features.reshape(-1, features.shape[1])  # (N_voxels, 7)
+    
+    return features, centers  # both shape: (N_voxels, X)
 
 def main():
     parser = argparse.ArgumentParser(description="Fetch features for a given PDB file around a specified residue")
@@ -56,12 +50,14 @@ def main():
     parser.add_argument("--res_num", dest="res_num", type=int, required=True, help="residue number to centre on")
     args = parser.parse_args()
 
-    pdb_in = args.pdb_in
-    pdb_id = args.pdb_id
-    input_path = os.path.join(pdb_in, pdb_id + ".pdb")
-    res_num = args.res_num
+    pdb_path = os.path.join(args.pdb_in, args.pdb_id + ".pdb")
+    features, centers = compute_voxel_features(args.res_num, pdb_path)
 
-    np.savetxt(pdb_id + "_feats.csv", compute_voxel_features(res_num,input_path),delimiter=",", fmt="%d")
+    # Concatenate coordinates (centers) with feature channels
+    data = np.hstack((centers, features))  # shape: (N, 10)
+
+    # Save to CSV: first 3 columns = x, y, z; next 7 = feature values
+    np.savetxt(args.pdb_id + "_feats.csv", data, delimiter=",", fmt="%.4f")
 
 
 if __name__ == "__main__":
