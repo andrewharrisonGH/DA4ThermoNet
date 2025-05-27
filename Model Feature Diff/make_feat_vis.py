@@ -5,7 +5,7 @@ from matplotlib.cm import ScalarMappable
 from matplotlib.colors import Normalize
 
 # --- Load CSV ---
-data = np.loadtxt("1A23_feats.csv", delimiter=",")
+data = np.loadtxt("1A23_A3390_0_0_feats.csv", delimiter=",")
 coords = data[:, :3]
 features = data[:, 3:]
 
