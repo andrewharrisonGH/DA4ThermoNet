@@ -4,6 +4,7 @@ from moleculekit.molecule import Molecule
 from Bio.PDB import PDBParser, NeighborSearch
 import argparse
 import os
+import numpy as np
 
 
 def compute_voxel_features(mutation_site, pdb_file, verbose=False, 
@@ -60,7 +61,7 @@ def main():
     input_path = os.path.join(pdb_in, pdb_id + ".pdb")
     res_num = args.res_num
 
-    print(compute_voxel_features(res_num,input_path))
+    np.savetxt(pdb_id + "_feats.csv", compute_voxel_features(res_num,input_path),delimiter=",", fmt="%d")
 
 
 if __name__ == "__main__":
