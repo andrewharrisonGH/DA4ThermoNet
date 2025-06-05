@@ -7,7 +7,7 @@ def main():
     df = pd.read_csv('./Rotations/rotations' + task_id + '.csv')
 
     for idx, row in df.iterrows():
-        x, y, z = row['x'], row['y'], row['z']
+        x_rot, y_rot, z_rot = row['x_rot'], row['y_rot'], row['z_rot']
 
         # Ensure x, y, z are converted to strings
         subprocess.run([
@@ -15,9 +15,9 @@ def main():
             "--pdb_in", "./pdb_in",
             "--pdb_id", "1A23A",
             "--pdb_out", "pdb_out",
-            "--xrot_clock", str(x),
-            "--yrot_clock", str(y),
-            "--zrot_clock", str(z),
+            "--xrot_clock", str(x_rot),
+            "--yrot_clock", str(y_rot),
+            "--zrot_clock", str(z_rot),
             "--res_num", "33"
         ])
 
