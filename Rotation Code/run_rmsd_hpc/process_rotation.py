@@ -4,7 +4,7 @@ import subprocess
 
 def main():
     task_id = str(sys.argv[1])
-    df = pd.read_csv('./Rotations/rotations' + {task_id} + '.csv')
+    df = pd.read_csv('./Rotations/rotations' + task_id + '.csv')
 
     for idx, row in df.iterrows():
         x, y, z = row['x'], row['y'], row['z']
