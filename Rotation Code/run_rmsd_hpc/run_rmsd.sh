@@ -21,7 +21,7 @@
 # The maximum running time of the job in days-hours:mins:sec
 #SBATCH --time=0-0:15:00
 
-#SBATCH --array=1-2
+#SBATCH --array=1-72
 
 # check that the script is launched with sbatch
 if [ "x$SLURM_JOB_ID" == "x" ]; then
