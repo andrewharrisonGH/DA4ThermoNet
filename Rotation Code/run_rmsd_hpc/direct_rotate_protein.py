@@ -89,7 +89,7 @@ def main():
     pdb_id = pdb_id[:-1]
     pdb_out = args.pdb_out
     res_num = args.res_num
-    structure = get_pdb_structure(pdb_id, pdb_in + '\\' + pdb_id + '.pdb')
+    structure = get_pdb_structure(pdb_id, pdb_in + '//' + pdb_id + '.pdb')
     model = list(structure.get_models())[0]
     
     residue = list(model.get_residues())[res_num-1]
