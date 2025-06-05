@@ -32,7 +32,9 @@ fi
 # Run the job from the directory where it was launched (default)
 
 # The modules to load:
-module load foss/2022a
+module load foss/2022a 
+module load Python/3.10.4
+module load SciPy-bundle/2022.05
 
 # The job command(s):
 python process_rotation.py $SLURM_ARRAY_TASK_ID
