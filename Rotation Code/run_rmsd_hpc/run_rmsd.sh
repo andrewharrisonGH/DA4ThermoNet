@@ -35,6 +35,7 @@ fi
 module load foss/2022a 
 module load Python/3.10.4
 module load SciPy-bundle/2022.05
+module load Biopython/1.79
 
 # The job command(s):
 python process_rotation.py $SLURM_ARRAY_TASK_ID
