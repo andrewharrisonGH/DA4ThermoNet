@@ -3,9 +3,9 @@
 import argparse
 import os
 import numpy as np
-from numpy import array, dot
+#from numpy import array, dot
 from math import pi
-from math import radians
+#from math import radians
 from copy import deepcopy
 #from Bio.PDB import *
 from Bio.PDB import MMCIFParser
