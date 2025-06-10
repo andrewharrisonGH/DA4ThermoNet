@@ -1,0 +1,3 @@
+SEQUENCE: 
+SCORE: total_score coordinate_constraint dslf_fa13    fa_atr    fa_dun   fa_elec fa_intra_rep fa_intra_sol_xover4              fa_rep              fa_sol hbond_bb_sc hbond_lr_bb    hbond_sc hbond_sr_bb lk_ball_wtd       omega     p_aa_pp pro_close rama_prepro         ref yhh_planarity description 
+SCORE:    -126.923               114.688     0.000 -1056.087   251.079  -246.662        2.216              36.855             197.016             633.261     -13.565     -20.231     -22.208     -69.126     -30.265      20.380     -29.396     1.545      48.509      53.957         1.111 1A23_relaxed
