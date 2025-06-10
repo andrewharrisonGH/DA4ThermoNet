@@ -1,0 +1,5 @@
+pdb_id,pos,wild_type,mutant,ddg
+1akkA,94,L,V,0.97
+1akkA,94,L,I,-0.2
+1akkA,94,L,A,3.5
+1akkA,33,H,N,-1.0

@@ -1,0 +1,17 @@
+pdb_id,pos,wild_type,mutant,ddg
+1btaA,51,L,V,-0.6
+1btaA,16,L,V,-1.1
+1btaA,75,R,Q,0.37
+1btaA,40,C,A,-0.1
+1btaA,78,K,A,0.03
+1btaA,78,K,Q,-0.33
+1btaA,22,K,Q,0.9
+1btaA,21,K,A,1.0
+1btaA,21,K,Q,1.03
+1btaA,5,I,V,-1.0
+1btaA,57,E,K,0.73
+1btaA,82,C,A,0.1
+1btaA,60,K,L,-0.6
+1btaA,60,K,E,1.1
+1btaA,34,L,V,-1.1
+1btaA,75,R,L,-0.7

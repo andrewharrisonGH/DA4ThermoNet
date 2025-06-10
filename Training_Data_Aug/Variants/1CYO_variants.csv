@@ -1,0 +1,14 @@
+pdb_id,pos,wild_type,mutant,ddg
+1cyoA,35,F,Y,-1.03
+1cyoA,45,V,Y,1.54
+1cyoA,45,V,T,0.96
+1cyoA,61,V,E,1.08
+1cyoA,71,S,L,-0.8
+1cyoA,45,V,H,1.46
+1cyoA,61,V,K,2.37
+1cyoA,61,V,H,1.61
+1cyoA,35,F,H,2.82
+1cyoA,35,F,L,1.87
+1cyoA,45,V,G,1.91
+1cyoA,61,V,Y,1.31
+1cyoA,45,V,E,2.37
