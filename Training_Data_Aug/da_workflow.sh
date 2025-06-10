@@ -38,7 +38,7 @@ module load Biopython/1.79
 # The job command(s):
 PDB_ID="$1"
 INPUT_PDB="./PDBs/$PDB_ID.pdb"
-VARIANT_LIST="./Variants/${PDB_ID}_mutants.csv"
+VARIANT_LIST="./Variants/${PDB_ID}_variants.csv"
 OUT_DIR="./PDB_relaxed/$PDB_ID"
 
 # Create output directory
