@@ -34,8 +34,8 @@ def main():
     df = pd.read_csv(args.csv_file)
 
     # Check required columns
-    #required_cols = {'pdb_id', 'pos', 'wild_type'} #Training Data
-    required_cols = {'pdb_id', 'mut_info'} #Testing Data
+    required_cols = {'pdb_id', 'pos', 'wild_type'} #Training Data
+    #required_cols = {'pdb_id', 'mut_info'} #Testing Data
     if not required_cols.issubset(df.columns):
         print(f"CSV file must contain the columns: {required_cols}")
         return
@@ -49,10 +49,10 @@ def main():
     for i, row in df.iterrows():
         pdb_id = str(row['pdb_id']).upper()[:-1]
         chain_id = str(row['pdb_id']).upper()[-1]
-        #pos = int(row['pos']) # Training Data
-        pos = int(str(row['mut_info']).upper()[1:-1])
-        #wild_type = str(row['wild_type']).upper() # Training Data
-        wild_type = str(row['mut_info']).upper()[0]
+        pos = int(row['pos']) # Training Data
+        #pos = int(str(row['mut_info']).upper()[1:-1])
+        wild_type = str(row['wild_type']).upper() # Training Data
+        #wild_type = str(row['mut_info']).upper()[0]
         
         structure = load_structure(pdb_id, pdb_dir)
         if not structure:

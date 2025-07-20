@@ -28,6 +28,7 @@ def main():
     # parse all the variants into a list
     variants = []
     with open(args.variant_list, 'rt') as ipf:
+        next(ipf)  # Skip the header line
         for l in ipf:
             pdb_chain, pos, w, m, ddg = l.upper().strip().split(',')
             variants.append((pdb_chain, w + pos + m))
@@ -67,6 +68,7 @@ def main():
 
         # run Rosetta FastRelax
         os.system(rosetta_relax_cmd)
+
 
 
 if __name__ == '__main__':
