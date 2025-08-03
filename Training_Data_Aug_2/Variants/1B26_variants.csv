@@ -1,0 +1,4 @@
+pdb_id,pos,wild_type,mutant,ddg
+1b26A,190,R,A,0.36
+1b26A,231,E,A,0.47
+1b26A,193,K,A,-0.5

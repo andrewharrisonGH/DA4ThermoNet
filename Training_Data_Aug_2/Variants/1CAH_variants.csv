@@ -1,0 +1,9 @@
+pdb_id,pos,wild_type,mutant,ddg
+1cahA,5,W,F,1.8
+1cahA,117,E,A,-5.5
+1cahA,107,H,N,-8.2
+1cahA,16,W,F,5.5
+1cahA,107,H,Y,-12.2
+1cahA,107,H,F,-10.0
+1cahA,107,H,A,-11.5
+1cahA,206,C,S,0.6

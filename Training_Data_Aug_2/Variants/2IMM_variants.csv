@@ -1,0 +1,12 @@
+pdb_id,pos,wild_type,mutant,ddg
+2immA,63,T,S,-0.29
+2immA,24,K,R,0.17
+2immA,79,Q,E,0.41
+2immA,100,A,G,-0.02
+2immA,21,M,I,-0.24
+2immA,15,A,L,-1.36
+2immA,106,L,I,-0.36
+2immA,21,M,L,0.31
+2immA,32,F,Y,-0.38
+2immA,43,P,S,0.17
+2immA,90,N,Q,-1.05

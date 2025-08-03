@@ -1,0 +1,11 @@
+pdb_id,pos,wild_type,mutant,ddg
+5croA,26,Y,C,-2.2
+5croA,26,Y,D,-2.7
+5croA,26,Y,Q,-1.4
+5croA,26,Y,W,0.1
+5croA,26,Y,F,-0.4
+5croA,26,Y,L,-1.1
+5croA,16,Q,L,-2.8
+5croA,36,A,S,-0.4
+5croA,26,Y,V,-0.9
+5croA,26,Y,H,-1.9

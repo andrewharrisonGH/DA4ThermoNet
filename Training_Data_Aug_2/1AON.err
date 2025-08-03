@@ -1,0 +1,448 @@
+/var/spool/slurm/job11034755/slurm_script: line 48: 185127 Killed                  /data/gpfs/projects/punim0539/Rosetta/rosetta.binary.linux.release-371/main/source/bin/relax.static.linuxgccrelease -in:file:s "$INPUT_PDB" -relax:constrain_relax_to_start_coords -out:suffix _relaxed -out:no_nstruct_label -relax:ramp_constraints false -out:path:all "$OUT_DIR"
+
+ERROR: Cannot open file "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/PDB_/PDB__relaxed.pdb"
+ERROR:: Exit from: src/core/import_pose/import_pose.cc line: 361
+
+[ ERROR ]: Caught exception:
+
+
+File: src/core/import_pose/import_pose.cc:361
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/PDB_/PDB__relaxed.pdb"
+
+
+
+
+AN INTERNAL ERROR HAS OCCURED. PLEASE SEE THE CONTENTS OF ROSETTA_CRASH.log FOR DETAILS.
+
+
+
+---------------------------------------------------------------
+[ ERROR ]: Error(s) were encountered when running jobs.
+1 jobs failed;
+Check the output further up for additional error messages.
+---------------------------------------------------------------
+
+
+ERROR: Cannot open file "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb"
+ERROR:: Exit from: src/core/import_pose/import_pose.cc line: 361
+
+[ ERROR ]: Caught exception:
+
+
+File: src/core/import_pose/import_pose.cc:361
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb"
+
+
+
+
+AN INTERNAL ERROR HAS OCCURED. PLEASE SEE THE CONTENTS OF ROSETTA_CRASH.log FOR DETAILS.
+
+
+
+---------------------------------------------------------------
+[ ERROR ]: Error(s) were encountered when running jobs.
+1 jobs failed;
+Check the output further up for additional error messages.
+---------------------------------------------------------------
+
+
+ERROR: Cannot open file "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb"
+ERROR:: Exit from: src/core/import_pose/import_pose.cc line: 361
+
+[ ERROR ]: Caught exception:
+
+
+File: src/core/import_pose/import_pose.cc:361
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb"
+
+
+
+
+AN INTERNAL ERROR HAS OCCURED. PLEASE SEE THE CONTENTS OF ROSETTA_CRASH.log FOR DETAILS.
+
+
+
+---------------------------------------------------------------
+[ ERROR ]: Error(s) were encountered when running jobs.
+1 jobs failed;
+Check the output further up for additional error messages.
+---------------------------------------------------------------
+
+
+ERROR: Cannot open file "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb"
+ERROR:: Exit from: src/core/import_pose/import_pose.cc line: 361
+
+[ ERROR ]: Caught exception:
+
+
+File: src/core/import_pose/import_pose.cc:361
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb"
+
+
+
+
+AN INTERNAL ERROR HAS OCCURED. PLEASE SEE THE CONTENTS OF ROSETTA_CRASH.log FOR DETAILS.
+
+
+
+---------------------------------------------------------------
+[ ERROR ]: Error(s) were encountered when running jobs.
+1 jobs failed;
+Check the output further up for additional error messages.
+---------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed_I3C_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed_I3C_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed_I3C_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed_I3C_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed_I3C_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed_I3W_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed_I3W_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed_I3W_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed_I3W_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed_I3W_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed_V95C_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed_V95C_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed_V95C_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed_V95C_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed.pdb'
+Traceback (most recent call last):
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 147, in <module>
+    main()
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 94, in main
+    structure = get_pdb_structure(pdb_id, pdb_in)
+  File "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/./direct_rotate_protein.py", line 22, in get_pdb_structure
+    data = parser.get_structure(pdb_id, pdb_file)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/PDB/PDBParser.py", line 96, in get_structure
+    with as_handle(file) as handle:
+  File "/apps/easybuild-2022/easybuild/software/Compiler/GCCcore/11.3.0/Python/3.10.4/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/Biopython/1.79/lib/python3.10/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'PDB_relaxed/1AON/1AON_relaxed_V95C_relaxed.pdb'
+slurmstepd: error: Detected 1 oom_kill event in StepId=11034755.batch. Some of the step tasks have been OOM Killed.

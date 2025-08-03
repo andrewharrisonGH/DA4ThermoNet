@@ -1,0 +1,300 @@
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2024.09+release.06b3cf8
+[COMMIT_DATE]: 2024-03-01T01:30:53.796737
+[APPLICATION]: /data/gpfs/projects/punim0539/Rosetta/rosetta.binary.linux.release-371/main/source/bin/relax.static.linuxgccrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: GNU/Linux
+[COMPILER]: GCC version "4.8.5 20150623 (Red Hat 4.8.5-44)"
+[STDLIB]: libstdc++ version 20150623
+[START_OPTIONS]
+ -in:file:s=/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb -in:file:fullatom -out:suffix=_I3C_relaxed -out:no_nstruct_label -out:file:scorefile=/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.sc -packing:resfile=1AON_I3C.resfile -optimization:default_max_cycles=200 -relax:constrain_relax_to_start_coords -relax:respect_resfile -relax:ramp_constraints=false
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+[0x6bd4ac0]
+[0x6b2d2f3]
+[0x6bda2a6]
+[0x4191976]
+[0x41924bd]
+[0x4192676]
+[0x40d1291]
+[0x40ad30d]
+[0x40af591]
+[0x414c718]
+[0x2f62848]
+[0x41bcbb]
+[0x73a5fb4]
+[0x73a6231]
+[0x6535d6]
+
+[END_BACKTRACE]
+
+[FILE]: src/core/import_pose/import_pose.cc
+[LINE]: 361
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb"
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2024.09+release.06b3cf8
+[COMMIT_DATE]: 2024-03-01T01:30:53.796737
+[APPLICATION]: /data/gpfs/projects/punim0539/Rosetta/rosetta.binary.linux.release-371/main/source/bin/relax.static.linuxgccrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: GNU/Linux
+[COMPILER]: GCC version "4.8.5 20150623 (Red Hat 4.8.5-44)"
+[STDLIB]: libstdc++ version 20150623
+[START_OPTIONS]
+ -in:file:s=/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb -in:file:fullatom -out:suffix=_I3W_relaxed -out:no_nstruct_label -out:file:scorefile=/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.sc -packing:resfile=1AON_I3W.resfile -optimization:default_max_cycles=200 -relax:constrain_relax_to_start_coords -relax:respect_resfile -relax:ramp_constraints=false
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+[0x6bd4ac0]
+[0x6b2d2f3]
+[0x6bda2a6]
+[0x4191976]
+[0x41924bd]
+[0x4192676]
+[0x40d1291]
+[0x40ad30d]
+[0x40af591]
+[0x414c718]
+[0x2f62848]
+[0x41bcbb]
+[0x73a5fb4]
+[0x73a6231]
+[0x6535d6]
+
+[END_BACKTRACE]
+
+[FILE]: src/core/import_pose/import_pose.cc
+[LINE]: 361
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb"
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2024.09+release.06b3cf8
+[COMMIT_DATE]: 2024-03-01T01:30:53.796737
+[APPLICATION]: /data/gpfs/projects/punim0539/Rosetta/rosetta.binary.linux.release-371/main/source/bin/relax.static.linuxgccrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: GNU/Linux
+[COMPILER]: GCC version "4.8.5 20150623 (Red Hat 4.8.5-44)"
+[STDLIB]: libstdc++ version 20150623
+[START_OPTIONS]
+ -in:file:s=/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb -in:file:fullatom -out:suffix=_V95C_relaxed -out:no_nstruct_label -out:file:scorefile=/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.sc -packing:resfile=1AON_V95C.resfile -optimization:default_max_cycles=200 -relax:constrain_relax_to_start_coords -relax:respect_resfile -relax:ramp_constraints=false
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+[0x6bd4ac0]
+[0x6b2d2f3]
+[0x6bda2a6]
+[0x4191976]
+[0x41924bd]
+[0x4192676]
+[0x40d1291]
+[0x40ad30d]
+[0x40af591]
+[0x414c718]
+[0x2f62848]
+[0x41bcbb]
+[0x73a5fb4]
+[0x73a6231]
+[0x6535d6]
+
+[END_BACKTRACE]
+
+[FILE]: src/core/import_pose/import_pose.cc
+[LINE]: 361
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb"
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2024.09+release.06b3cf8
+[COMMIT_DATE]: 2024-03-01T01:30:53.796737
+[APPLICATION]: /data/gpfs/projects/punim0539/Rosetta/rosetta.binary.linux.release-371/main/source/bin/relax.static.linuxgccrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: GNU/Linux
+[COMPILER]: GCC version "4.8.5 20150623 (Red Hat 4.8.5-44)"
+[STDLIB]: libstdc++ version 20150623
+[START_OPTIONS]
+ -in:file:s=/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb -in:file:fullatom -out:suffix=_I3C_relaxed -out:no_nstruct_label -out:file:scorefile=/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.sc -packing:resfile=1AON_I3C.resfile -optimization:default_max_cycles=200 -relax:constrain_relax_to_start_coords -relax:respect_resfile -relax:ramp_constraints=false
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+[0x6bd4ac0]
+[0x6b2d2f3]
+[0x6bda2a6]
+[0x4191976]
+[0x41924bd]
+[0x4192676]
+[0x40d1291]
+[0x40ad30d]
+[0x40af591]
+[0x414c718]
+[0x2f62848]
+[0x41bcbb]
+[0x73a5fb4]
+[0x73a6231]
+[0x6535d6]
+
+[END_BACKTRACE]
+
+[FILE]: src/core/import_pose/import_pose.cc
+[LINE]: 361
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb"
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2024.09+release.06b3cf8
+[COMMIT_DATE]: 2024-03-01T01:30:53.796737
+[APPLICATION]: /data/gpfs/projects/punim0539/Rosetta/rosetta.binary.linux.release-371/main/source/bin/relax.static.linuxgccrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: GNU/Linux
+[COMPILER]: GCC version "4.8.5 20150623 (Red Hat 4.8.5-44)"
+[STDLIB]: libstdc++ version 20150623
+[START_OPTIONS]
+ -in:file:s=/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb -in:file:fullatom -out:suffix=_I3W_relaxed -out:no_nstruct_label -out:file:scorefile=/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.sc -packing:resfile=1AON_I3W.resfile -optimization:default_max_cycles=200 -relax:constrain_relax_to_start_coords -relax:respect_resfile -relax:ramp_constraints=false
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+[0x6bd4ac0]
+[0x6b2d2f3]
+[0x6bda2a6]
+[0x4191976]
+[0x41924bd]
+[0x4192676]
+[0x40d1291]
+[0x40ad30d]
+[0x40af591]
+[0x414c718]
+[0x2f62848]
+[0x41bcbb]
+[0x73a5fb4]
+[0x73a6231]
+[0x6535d6]
+
+[END_BACKTRACE]
+
+[FILE]: src/core/import_pose/import_pose.cc
+[LINE]: 361
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb"
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
+##############################################################################################################
+#
+# Rosetta crash log. Please submit the contents of this file to http://crash.rosettacommons.org/
+# or use the script Rosetta/main/source/scripts/python/public/report_crashes.py
+#
+
+[START_CRASH_REPORT]
+[ROSETTA_VERSION]: 2024.09+release.06b3cf8
+[COMMIT_DATE]: 2024-03-01T01:30:53.796737
+[APPLICATION]: /data/gpfs/projects/punim0539/Rosetta/rosetta.binary.linux.release-371/main/source/bin/relax.static.linuxgccrelease
+[MODE]: Release
+[EXTRAS]: default
+[OS]: GNU/Linux
+[COMPILER]: GCC version "4.8.5 20150623 (Red Hat 4.8.5-44)"
+[STDLIB]: libstdc++ version 20150623
+[START_OPTIONS]
+ -in:file:s=/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb -in:file:fullatom -out:suffix=_V95C_relaxed -out:no_nstruct_label -out:file:scorefile=/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.sc -packing:resfile=1AON_V95C.resfile -optimization:default_max_cycles=200 -relax:constrain_relax_to_start_coords -relax:respect_resfile -relax:ramp_constraints=false
+
+[END_OPTIONS]
+
+[START_BACKTRACE]: RAW_LIBC
+[0x6bd4ac0]
+[0x6b2d2f3]
+[0x6bda2a6]
+[0x4191976]
+[0x41924bd]
+[0x4192676]
+[0x40d1291]
+[0x40ad30d]
+[0x40af591]
+[0x414c718]
+[0x2f62848]
+[0x41bcbb]
+[0x73a5fb4]
+[0x73a6231]
+[0x6535d6]
+
+[END_BACKTRACE]
+
+[FILE]: src/core/import_pose/import_pose.cc
+[LINE]: 361
+[START_MESSAGE]
+[ ERROR ] UtilityExitException
+ERROR: Cannot open file "/data/gpfs/projects/punim0539/andrewh/Training_Data_Aug/PDB_relaxed/1AON/1AON_relaxed.pdb"
+
+
+
+[END_MESSAGE]
+[END_CRASH_REPORT]
+
