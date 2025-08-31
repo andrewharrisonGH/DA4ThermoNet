@@ -38,7 +38,7 @@ def main():
     base_dir = os.path.abspath(args.base_dir)
     for pdb_chain, variant in variants:
         # create and change to necessary directory
-        chain_dir = os.path.join(base_dir, pdb_chain[:4])
+        chain_dir = os.path.join(base_dir, pdb_chain)
         if not os.path.exists(chain_dir):
             os.mkdir(chain_dir)
             print('Created directory:', chain_dir)
@@ -47,14 +47,14 @@ def main():
         print('Changed to', chain_dir)
 
         # create a resfile
-        variant_resfile = pdb_chain[:4] + '_' + variant + '.resfile'
+        variant_resfile = pdb_chain + '_' + variant + '.resfile'
         with open(variant_resfile, 'wt') as opf:
             opf.write('NATAA\n')
             opf.write('start\n')
             opf.write(variant[1:-1] + ' ' + pdb_chain[-1] + ' PIKAA ' + variant[-1])
 
         # rosetta_cmd
-        start_struct = os.path.join(base_dir, pdb_chain[:4], pdb_chain[:4] + '_relaxed.pdb')
+        start_struct = os.path.join(base_dir, pdb_chain, pdb_chain + '_relaxed.pdb')
         rosetta_relax_cmd = ' '.join([args.rosetta_bin, 
             '-in:file:s', start_struct, '-in:file:fullatom',
             '-relax:constrain_relax_to_start_coords',
@@ -62,7 +62,7 @@ def main():
             '-relax:respect_resfile',
             '-packing:resfile', variant_resfile,
             '-default_max_cycles', '200',
-            '-out:file:scorefile', os.path.join(chain_dir, pdb_chain[:4] + '_relaxed.sc'),
+            '-out:file:scorefile', os.path.join(chain_dir, pdb_chain + '_relaxed.sc'),
             '-out:suffix', '_' + variant + '_relaxed'
         ])
 

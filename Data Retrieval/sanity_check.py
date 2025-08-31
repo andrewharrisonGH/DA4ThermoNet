@@ -47,7 +47,7 @@ def main():
     mismatches = []
 
     for i, row in df.iterrows():
-        pdb_id = str(row['pdb_id']).upper()[:-1]
+        pdb_id = str(row['pdb_id']).upper()
         chain_id = str(row['pdb_id']).upper()[-1]
         pos = int(row['pos']) # Training Data
         #pos = int(str(row['mut_info']).upper()[1:-1])

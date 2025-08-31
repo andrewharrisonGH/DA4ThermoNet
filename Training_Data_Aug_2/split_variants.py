@@ -16,7 +16,7 @@ def split_mutation_csvs(input_csv, output_dir):
         return None
 
     for pdb_id_chain, group_df in df.groupby("pdb_id"):
-        pdb_root = pdb_id_chain[:-1].upper()  # strip chain letter
+        pdb_root = pdb_id_chain.upper()  # strip chain letter
         out_path = output_dir / f"{pdb_root}_variants.csv"
         group_df.to_csv(out_path, index=False)
         print(f"  -> Wrote {len(group_df)} rows to {out_path.name}")
