@@ -94,9 +94,9 @@ def main():
     structure = get_pdb_structure(pdb_id, pdb_in)
     model = list(structure.get_models())[0]
     
-
-    first_res_num = list(model.get_residues())[0].get_id()[1]
-    residue = list(model.get_residues())[res_num-first_res_num]
+    for res in list(model.get_residues()):
+        if res.get_id()[1] == res_num:
+            residue = res
     atoms = list(residue.get_atoms())
     if residue.get_resname() == 'GLY':
         central_atom = atoms[1]
@@ -108,9 +108,9 @@ def main():
     if not os.path.exists(pdb_out):
         os.makedirs(pdb_out)
 
-    #output_path = os.path.join(pdb_out, pdb_id)
+    output_path = os.path.join(pdb_out, pdb_id)
 
-    #if not os.path.exists(output_path):
+    # if not os.path.exists(output_path):
     #    os.makedirs(output_path)
 
     rotation = R.from_euler('zyx', [args.zrot_clock, args.yrot_clock, args.xrot_clock], degrees=True)

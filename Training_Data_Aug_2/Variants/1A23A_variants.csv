@@ -4,3 +4,8 @@ pdb_id,pos,wild_type,mutant,ddg
 1a23A,32,H,L,-4.95
 1a23A,32,H,S,-4.4
 1a23A,30,C,S,1.8
+1a43A,167,R,A,3.05
+1a43A,159,E,D,3.5
+1a43A,156,G,A,1.9
+1a43A,218,C,S,2.55
+1a43A,184,W,A,0.7
