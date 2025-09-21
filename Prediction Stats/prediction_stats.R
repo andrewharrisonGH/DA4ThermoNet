@@ -4,10 +4,10 @@ rmsd <- function(pred, target) {
 }
 
 # Read target values
-target <- scan("target.txt", what = numeric())
+target <- scan("ssym_tensors_fwd_ddg.txt", what = numeric())
 
 # Collect predictions from 10 files into a matrix
-pred_list <- lapply(1:10, function(i) scan(paste0("predictions_", i, ".txt"), what = numeric()))
+pred_list <- lapply(1:5, function(i) scan(paste0("Ssym_DA5rotTN_predictions_", i, ".txt"), what = numeric()))
 pred_matrix <- do.call(cbind, pred_list)
 
 # Average predictions across files

@@ -29,7 +29,7 @@
 #SBATCH --mail-type=END
 
 # The maximum running time of the job in days-hours:mins:sec
-#SBATCH --time=0-16:00:00
+#SBATCH --time=2-00:00:00
 
 # check that the script is launched with sbatch
 if [ "x$SLURM_JOB_ID" == "x" ]; then
@@ -45,7 +45,7 @@ conda activate tensorflow112
 # Run the job from the directory where it was launched (default)
 
 # The job command(s):
-python train_ensemble.py --direct_features Q1744_tensors2_fwd.npy --inverse_features Q1744_tensors2_rev.npy --direct_targets Q1744_tensors2_fwd_ddg.txt --epochs 200 --prefix DA5rotTN
+python train_ensemble.py --direct_features Q1744_tensors0_fwd.npy --inverse_features Q1744_tensors0_rev.npy --direct_targets Q1744_tensors0_fwd_ddg.txt --epochs 200 --prefix DA0rotTN
 
 ##DO NOT ADD/EDIT BEYOND THIS LINE##
 ##Job monitor command to list the resource usage
