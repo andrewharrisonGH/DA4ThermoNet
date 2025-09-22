@@ -63,10 +63,11 @@ plot_ly(
   y = interp_data$y,
   z = interp_data$z,
   type = "surface",
+  colorbar = list(title="RMSD"),
   colorscale = list(c(0, 'blue'), c(1, 'red'))
 ) %>%
   layout(
-    title = "RMSD Surface by X and Y Rotation",
+    title = "RMSD Surface of 1A23 (center=33) by X and Y Rotation (°)",
     scene = list(
       xaxis = list(title = "X Rotation (°)"),
       yaxis = list(title = "Y Rotation (°)"),
