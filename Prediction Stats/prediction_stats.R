@@ -7,7 +7,7 @@ rmsd <- function(pred, target) {
 target <- scan("ssym_tensors_fwd_ddg.txt", what = numeric())
 
 # Collect predictions from 10 files into a matrix
-pred_list <- lapply(1:5, function(i) scan(paste0("Ssym_DA5rotTN_predictions_", i, ".txt"), what = numeric()))
+pred_list <- lapply(1:5, function(i) scan(paste0("Ssym_DA0rotTN_predictions_", i, ".txt"), what = numeric()))
 pred_matrix <- do.call(cbind, pred_list)
 
 # Average predictions across files
@@ -17,7 +17,7 @@ avg_pred <- rowMeans(pred_matrix)
 rmsd_val <- rmsd(avg_pred, target)
 
 # Compute Pearson correlation
-cor_val <- cor(avg_pred, target, method = "pearson")
+cor_val <- cor(target, avg_pred, method = "pearson")
 
 # Print results
 cat("RMSD:", rmsd_val, "\n")
