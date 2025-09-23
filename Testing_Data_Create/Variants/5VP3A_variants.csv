@@ -1,0 +1,4 @@
+pdb_id,pos,wild_type,mutant,ddg
+5VP3A,39,R,K,0.413
+5VP3A,128,S,G,-0.378
+5VP3A,183,V,T,0.354

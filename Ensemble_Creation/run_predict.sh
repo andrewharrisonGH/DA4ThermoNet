@@ -45,7 +45,7 @@ conda activate tensorflow112
 # Run the job from the directory where it was launched (default)
 
 # The job command(s):
-for i in `seq 1 10`; do python predict.py -x ssym_tensors_fwd.npy -m DA0rotTN_member_${i}.h5 -o Ssym_DA0rotTN_predictions_${i}.txt; done
+for i in `seq 1 10`; do python predict.py -x s669_tensors_fwd.npy -m DA0rotTN_member_${i}.h5 -o S669_DA0rotTN_predictions_${i}.txt; done
 
 
 ##DO NOT ADD/EDIT BEYOND THIS LINE##

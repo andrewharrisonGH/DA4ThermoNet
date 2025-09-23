@@ -366,7 +366,11 @@ def compute_voxel_features(mutation_site, pdb_file, verbose=False,
 
     """
     mol = Molecule(pdb_file)
-    prot = prepareProteinForAtomtyping(mol, verbose=verbose)
+    try:
+        prot = prepareProteinForAtomtyping(mol, verbose=verbose)
+    except RuntimeError as e:
+        # Append the filename to the error message and re-raise
+        raise RuntimeError(f"PDB causing issue: {pdb_file}\nOriginal error: {str(e)}") from e
     center = mol.get('coords', 'resid ' + str(mutation_site) + ' and name CB')
     # center_wt = compute_interaction_center(pdb_file_wt, mutation_site)
     if center.size == 0:

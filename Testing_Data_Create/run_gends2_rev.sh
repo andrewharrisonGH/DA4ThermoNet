@@ -45,7 +45,7 @@ conda activate thermonet
 # Run the job from the directory where it was launched (default)
 
 # The job command(s):
-python gends2.py --input ssym_ref.csv --output ssym_tensors --pdb_dir ./PDB_relaxed  --rotations rotations.csv --boxsize 16 --voxelsize 1 --ncores 32 --reverse
+python gends2.py --input s669_ref.csv --output s669_tensors --pdb_dir ./PDB_relaxed  --rotations rotations.csv --boxsize 16 --voxelsize 1 --ncores 32 --reverse
 
 ##DO NOT ADD/EDIT BEYOND THIS LINE##
 ##Job monitor command to list the resource usage

@@ -1,0 +1,5 @@
+pdb_id,pos,wild_type,mutant,ddg
+3G1GA,155,D,Y,0.34
+3G1GA,167,F,Y,-0.74
+3G1GA,190,I,V,-0.17
+3G1GA,185,R,W,1.32
