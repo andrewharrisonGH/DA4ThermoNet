@@ -38,14 +38,12 @@ if [ "x$SLURM_JOB_ID" == "x" ]; then
 fi
 
 # The modules to load:
-module load Anaconda3/2024.02-1
-eval "$(conda shell.bash hook)"
-conda activate tensorflow112
+module load foss/2022a TensorFlow/2.15.1-CUDA-12.2.0-Python-3.11.3
 
 # Run the job from the directory where it was launched (default)
 
 # The job command(s):
-for i in `seq 1 10`; do python predict.py -x s669_tensors_rev.npy -m DA0rotTN_member_${i}.h5 -o S669r_DA0rotTN_predictions_${i}.txt; done
+for i in `seq 1 10`; do python predict.py -x ssym_tensors_rev.npy -m DAi90rotTN_member_${i}.h5 -o Ssymr_DAi90rotTN_predictions_${i}.txt; done
 
 
 ##DO NOT ADD/EDIT BEYOND THIS LINE##

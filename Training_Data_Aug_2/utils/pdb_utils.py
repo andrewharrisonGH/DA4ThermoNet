@@ -7,6 +7,7 @@ from moleculekit.tools.voxeldescriptors import getVoxelDescriptors,getCenters, r
 from moleculekit.tools.atomtyper import prepareProteinForAtomtyping
 from moleculekit.molecule import Molecule
 from Bio.PDB import PDBParser, NeighborSearch
+import gc
 import subprocess
 import math
 
@@ -379,17 +380,27 @@ def compute_voxel_features(mutation_site, pdb_file, verbose=False,
     if rotations is None:
         features, _, _ = getVoxelDescriptors(prot, center=center.flatten(), 
                 boxsize=[boxsize, boxsize, boxsize], voxelsize=voxelsize, validitychecks=False)
+        # Clean up unused outputs
+        del _
+        gc.collect()
     else:
         voxel_centers = getCenters(prot, boxsize=[boxsize, boxsize, boxsize], 
                 center=center.flatten(), voxelsize=voxelsize)
         rotated_voxel_centers = rotateCoordinates(voxel_centers[0], rotations, center.flatten())
         features, _ = getVoxelDescriptors(prot, usercenters=rotated_voxel_centers, validitychecks=False)
+        # Clean up intermediate objects
+        del voxel_centers, rotated_voxel_centers, _
+        gc.collect()
     # return features
     nchannels = features.shape[1]
     n_voxels = int(boxsize / voxelsize)
-    features = features.transpose().reshape((nchannels, n_voxels, n_voxels, n_voxels))
+    features_reshaped = features.transpose().reshape((nchannels, n_voxels, n_voxels, n_voxels))
 
-    return features
+    # Delete large objects before returning
+    del mol, prot, features
+    gc.collect()
+
+    return features_reshaped
 
 
 def build_mt_struct(pdb_wt, chain_id, pos, wt, mt, overwrite=False, outdir=None):

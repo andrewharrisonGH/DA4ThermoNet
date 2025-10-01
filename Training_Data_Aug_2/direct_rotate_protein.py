@@ -105,13 +105,16 @@ def main():
     # n_alpha = list(list(model.get_residues())[res_num-1].get_atoms())[0]
     centre_model(model, central_atom.coord)
 
-    if not os.path.exists(pdb_out):
-        os.makedirs(pdb_out)
+    # Only create output directories if no explicit out_name was given
+    if not args.out_name:
+        if not os.path.exists(pdb_out):
+            os.makedirs(pdb_out)
 
-    output_path = os.path.join(pdb_out, pdb_id)
-
-    # if not os.path.exists(output_path):
-    #    os.makedirs(output_path)
+        output_path = os.path.join(pdb_out, pdb_id)
+        os.makedirs(output_path, exist_ok=True)
+    else:
+        # When out_name is provided, we’ll use that path directly
+        output_path = None
 
     rotation = R.from_euler('zyx', [args.zrot_clock, args.yrot_clock, args.xrot_clock], degrees=True)
 
