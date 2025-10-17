@@ -1,6 +1,8 @@
+library(ggplot2)
+
 # RMSD and PCC ------------------------------------------|
-target_file <-"./S669/s669_tensors_fwd_ddg.txt"
-pred_file <- "./S669/S669_i120TN_predictions_"
+target_file <-"./S669/s669_tensors_rev_ddg.txt"
+pred_file <- "./S669/S669r_i20TN_predictions_"
 
 # Function to compute RMSD
 rmsd <- function(pred, target) {
@@ -36,8 +38,8 @@ cat("Pearson correlation:", cor_val, "\n")
 cat("Mean Absolute Error:", mae_val, "\n")
 
 # fwd+rev PCC and delta -----------------------------------------------|
-fwd_file <- "./S669/S669_ThermoNet_predictions_"
-rev_file <- "./S669/S669r_ThermoNet_predictions_"
+fwd_file <- "./S669/S669_i20TN_predictions_"
+rev_file <- "./S669/S669r_i20TN_predictions_"
 
 # Collect predictions from 10 files into a matrix
 fwd_list <- lapply(1:10, function(i) scan(paste0(fwd_file, i, ".txt"), what = numeric()))
@@ -79,14 +81,14 @@ rmsd <- function(pred, target) {
 }
 
 # Read target values
-target_file <-"./S669/s669_tensors_fwd_ddg.txt"
+target_file <-"./S669/s669_tensors_rev_ddg.txt"
 target <- scan(target_file, what = numeric())
 
 # --- Function to collect RMSDs for one run ---
 get_rmsds <- function(label) {
   sapply(1:10, function(e) {
     pred_list <- lapply(1:10, function(i) {
-      scan(paste0("./S669/S669_", e, "_", label, "TN_predictions_", i, ".txt"), what = numeric())
+      scan(paste0("./S669/S669r_", e, "_", label, "TN_predictions_", i, ".txt"), what = numeric())
     })
     
     pred_matrix <- do.call(cbind, pred_list)
@@ -101,15 +103,32 @@ get_rmsds <- function(label) {
 
 # --- Collect for both runs ---
 results_0   <- get_rmsds("0")
+results_i180 <- get_rmsds("i180")
+results_i120 <- get_rmsds("i120")
+results_i90 <- get_rmsds("i90")
 results_i72 <- get_rmsds("i72")
+results_i60 <- get_rmsds("i60")
 
-all_results <- rbind(results_0, results_i72)
+all_results <- rbind(results_0, results_i180, results_i120, results_i90, 
+                     results_i72, results_i60)
+
+all_results$label <- factor(all_results$label, level=c("0", "i180", "i120",
+                                                       "i90", "i72", "i60"))
 
 # --- Boxplot ---
-boxplot(rmsd ~ label, data = all_results,
-        main = "RMSD by Run",
-        xlab = "Run",
-        ylab = "RMSD")
+
+
+ggplot(all_results, aes(x = label, y = rmsd, fill = label)) +
+  geom_boxplot(width = 0.6, outlier.shape = NA) +
+  geom_jitter(width = 0.15, shape = 21, size = 2, stroke = 0.4, color = "black", fill = "white") +
+  scale_fill_manual(values = c("0"="#4E79A7","i180"="#59A14F","i120"="#F28E2B",
+                               "i90"="#E15759","i72"="#76B7B2","i60"="#EDC948")) +
+  labs(x = "Run", y = "RMSD") +
+  coord_cartesian(ylim = c(1.49, 1.59)) +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, face = "bold"),
+        axis.title = element_text(face = "bold"))
 
 #test Normality
 shapiro.test(all_results$rmsd[all_results$label == "0"])

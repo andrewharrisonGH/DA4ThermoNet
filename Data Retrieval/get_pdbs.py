@@ -77,7 +77,7 @@ def main():
 
     # Set up output directory
     csv_dir = os.path.dirname(os.path.abspath(args.csv_file))
-    pdb_dir = os.path.join(csv_dir, 'pdbs')
+    pdb_dir = os.path.join(csv_dir, 'PDBs')
     os.makedirs(pdb_dir, exist_ok=True)
 
     for pdb_id_full in unique_pdb_ids:

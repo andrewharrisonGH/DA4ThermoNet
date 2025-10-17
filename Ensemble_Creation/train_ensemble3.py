@@ -73,7 +73,7 @@ def build_model(model_type='regression', conv_layer_sizes=(16, 16, 16), dense_la
 
 
 def make_dataset_memmap(X_direct, X_inverse, y_direct, y_inverse,
-                        direct_idx, inverse_idx, batch_size=128, shuffle=True):
+                        direct_idx, inverse_idx, batch_size=8, shuffle=True):
     """
     Fully vectorized input pipeline using tf.data and memory-mapped NumPy arrays.
     
